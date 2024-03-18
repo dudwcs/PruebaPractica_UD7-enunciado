@@ -41,14 +41,14 @@ class NotaController
 
                 return json_encode($notaGuardada);
             } else {
-                http_response_code(404);
+                http_response_code(400);
                 $response["error"] = "No se permite ese título";
                 return json_encode($response);
             }
 
 
         } else {
-            http_response_code(404);
+            http_response_code(400);
             $response["error"] = true;
             return json_encode($response);
         }
